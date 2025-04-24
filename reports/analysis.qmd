@@ -31,7 +31,11 @@ In this section, we perform exploratory data analysis (EDA) and prepare the data
 ```{r}
 # Summary statistics
 glimpse(data)
-summary <- dplyr::summarise(data, mean_bill_length = mean(bill_length_mm), mean_bill_depth = mean(bill_depth_mm), mean_flipper_length = mean(flipper_length_mm), mean_body_mass = mean(body_mass_g))
+summary <- dplyr::summarise(data, 
+                            mean_bill_length = mean(bill_length_mm), 
+                            mean_bill_depth = mean(bill_depth_mm), 
+                            mean_flipper_length = mean(flipper_length_mm), 
+                            mean_body_mass = mean(body_mass_g))
 
 
 # Visualizations
