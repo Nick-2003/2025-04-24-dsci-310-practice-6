@@ -28,7 +28,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: nt2103/dsci310practice3 # Remember to change accordingly
+          images: nt2103/dsci310practice6 # Remember to change accordingly
           tags: |
             type=raw, value={{sha}},enable=${{github.ref_type != 'tag' }}
             type=raw, value=latest

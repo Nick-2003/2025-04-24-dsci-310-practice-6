@@ -11,6 +11,8 @@ Options:
 
 library(docopt)
 library(readr)
+library(dplyr)
+library(ggplot2)
 
 opt <- docopt::docopt(doc)
 

@@ -8,6 +8,8 @@ Options:
 
 library(docopt)
 library(readr)
+library(palmerpenguins)
+library(tidyr)
 
 opt <- docopt::docopt(doc)
 

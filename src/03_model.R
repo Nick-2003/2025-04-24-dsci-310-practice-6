@@ -11,10 +11,15 @@ Options:
 
 library(docopt)
 library(readr)
+library(dplyr)
+library(rsample)
+library(parsnip)
+library(workflows)
 
 opt <- docopt::docopt(doc)
 
-data <- readr::read_csv(opt$input_path)
+data <- readr::read_csv(opt$input_path)  %>%
+  dplyr::mutate(species = as.factor(species))
 
 # Split data
 set.seed(123)

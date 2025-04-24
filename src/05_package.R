@@ -9,13 +9,14 @@ Options:
 
 library(docopt)
 library(readr)
+library(package20250424)
 
 opt <- docopt::docopt(doc)
 
 # Explicit namespace use
-calls <- c("regexcite20250416::is_leap(2000)",
-           "regexcite20250416::is_leap(1900)",
-           "regexcite20250416::temp_conv(41, 'F', 'C')")
+calls <- c("package20250424::is_leap(2000)",
+           "package20250424::temp_conv(5, 'C', 'K')",
+           "package20250424::str_split_one('a,b,c', ',')")
 
 # Evaluate each safely
 outputs <- sapply(calls, function(call) {

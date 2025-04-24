@@ -1,0 +1,4 @@
+Function,Output.package20250424..is_leap.2000.,Output.package20250424..temp_conv.5...C....K..,Output.package20250424..str_split_one..a.b.c.......
+package20250424::is_leap(2000),TRUE,278.15,a
+"package20250424::temp_conv(5, 'C', 'K')",TRUE,278.15,b
+"package20250424::str_split_one('a,b,c', ',')",TRUE,278.15,c

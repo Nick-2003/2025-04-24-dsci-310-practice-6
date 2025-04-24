@@ -25,16 +25,15 @@ knitr::kable(head(data))
 
 In this section, we perform exploratory data analysis (EDA) and prepare the data for modeling.
 
-- @tbl-glimpse
 - @tbl-summary
 - @fig-boxplot
 - @tbl-clean
 
-```{r tbl-glimpse}
+```{r}
 #| echo: false
 #| tbl-cap: Glimpse at base data
 # Summary statistics
-glimpse(data)
+dplyr::glimpse(data)
 ```
 
 ```{r tbl-summary}
@@ -44,7 +43,7 @@ summary <- readr::read_csv("~/work/output/summary.csv")
 knitr::kable(summary)
 ```
 
-![Boxplot visualisation of bill_length_mm against species]("work/output/boxplot.png"){#fig-boxplot}
+![Boxplot visualisation of bill_length_mm against species]("~/work/output/boxplot.png"){#fig-boxplot}
 
 ```{r tbl-clean}
 #| echo: false
