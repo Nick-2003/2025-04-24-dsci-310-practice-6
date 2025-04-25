@@ -16,6 +16,8 @@ The R programming language [@R]  and the following R packages were used to perfo
 ```{r tbl-raw_data}
 #| echo: false
 #| tbl-cap: Loading penguins data.
+#| warning: false
+#| message: false
 
 data <- readr::read_csv("~/work/data/raw/penguins.csv")
 knitr::kable(head(data))
@@ -32,6 +34,9 @@ In this section, we perform exploratory data analysis (EDA) and prepare the data
 ```{r}
 #| echo: false
 #| tbl-cap: Glimpse at base data
+#| warning: false
+#| message: false
+
 # Summary statistics
 dplyr::glimpse(data)
 ```
@@ -39,6 +44,9 @@ dplyr::glimpse(data)
 ```{r tbl-summary}
 #| echo: false
 #| tbl-cap: Aggregation data
+#| warning: false
+#| message: false
+
 summary <- readr::read_csv("~/work/output/summary.csv")
 knitr::kable(summary)
 ```
@@ -48,6 +56,9 @@ knitr::kable(summary)
 ```{r tbl-clean}
 #| echo: false
 #| tbl-cap: Glimpse at base data
+#| warning: false
+#| message: false
+
 # Prepare data for modeling
 data <- readr::read_csv("~/work/data/processed/penguins_cleaned.csv")
 knitr::kable(head(data))
@@ -60,6 +71,8 @@ We will fit a classification model using `tidymodels` to predict the species of 
 ```{r tbl-model}
 #| echo: false
 #| tbl-cap: Model summary statistics
+#| warning: false
+#| message: false
 
 # Fit model
 penguin_fit <- readr::read_rds("~/work/output/penguin_fit.rds")
@@ -73,6 +86,8 @@ We evaluate the performance of the model using the test dataset.
 ```{r tbl-results}
 #| echo: false
 #| tbl-cap: Model performance results
+#| warning: false
+#| message: false
 
 # Confusion matrix
 conf_mat <- readr::read_rds("~/work/output/conf_mat.rds")
@@ -86,6 +101,8 @@ Test the usage of packages in the report.
 ```{r}
 #| echo: false
 #| tbl-cap: Custom package testing
+#| warning: false
+#| message: false
 
 func_outputs <- readr::read_csv("~/work/output/func_outputs.csv")
 knitr::kable(func_outputs)
